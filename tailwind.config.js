@@ -16,8 +16,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#DA7D4A",
-        "text-primary": "#DA7D4A",
-        "text-secondary": "#DA7D4A",
+        "font-primary": "#334155",
+        "font-secondary": "#94A3B8",
         "bg-1": "#FDFCFB",
         "bg-2": "#F7ECE1",
       },
@@ -61,9 +61,13 @@ module.exports = {
           "14px",
           { lineHeight: "21px", letterSpacing: "normal", fontWeight: "400" },
         ],
-        "primary-title": [
+        "2xl": [
           "64px",
-          { lineHeight: "normal", letterSpacing: "normal", fontWeight: "400" },
+          { lineHeight: "68px", letterSpacing: "2px", fontWeight: "400" },
+        ],
+        "3xl": [
+          "96px",
+          { lineHeight: "101px", letterSpacing: "2px", fontWeight: "400" },
         ],
 
         "h1-xs": [
@@ -102,10 +106,23 @@ module.exports = {
           "14px",
           { lineHeight: "21px", letterSpacing: "normal", fontWeight: "400" },
         ],
-        "primary-title-xs": [
-          "52px",
-          { lineHeight: "normal", letterSpacing: "normal", fontWeight: "400" },
+        "2xl-xs": [
+          "40px",
+          { lineHeight: "42px", letterSpacing: "2px", fontWeight: "400" },
         ],
+        "3xl-xs": [
+          "96px",
+          { lineHeight: "101px", letterSpacing: "2px", fontWeight: "400" },
+        ],
+      },
+      animation: {
+        marquee: "marquee 10s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
     },
   },
