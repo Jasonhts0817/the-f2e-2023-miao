@@ -1,5 +1,7 @@
-<div class="container m-auto bg-bg-2 px-4 py-16 md:px-9 xl:px-0 xl:py-[104px]">
-  <div class="flex flex-col overflow-hidden rounded-3xl bg-white xl:flex-row">
+<div class="bg-bg-2 px-4 py-16 md:px-9 xl:px-0 xl:py-[104px]">
+  <div
+    class="container m-auto flex flex-col overflow-hidden rounded-3xl bg-white xl:flex-row"
+  >
     <div class="flex flex-col gap-8 px-6 py-10 xl:w-1/2 xl:px-10 xl:py-16">
       <app-title tag="ADVOCATE" title="候選人主張"></app-title>
       <div class="text-h3">
@@ -18,7 +20,14 @@
       </div>
     </div>
     <div class="xl:w-1/2">
-      <img class="h-full object-cover" src="/assets/images/image 8.png" />
+      <picture>
+        <source srcset="/assets/images/webp/image-8.webp" type="image/webp" />
+        <img
+          class="h-full object-cover"
+          src="/assets/images/png/image-8.png"
+          alt="候選人"
+        />
+      </picture>
     </div>
   </div>
 </div>

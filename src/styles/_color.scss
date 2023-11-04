@@ -5,4 +5,8 @@
   .text-gradient-primary {
     @apply bg-gradient-to-r from-[#E5793B] from-[1.54%] to-[#FF4185] to-[97.86%] bg-clip-text text-transparent;
   }
+  .icon-primary {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(13%) saturate(1539%)
+      hue-rotate(176deg) brightness(96%) contrast(83%);
+  }
 }
