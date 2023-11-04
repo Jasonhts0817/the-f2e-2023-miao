@@ -21,6 +21,9 @@ module.exports = {
         "bg-1": "#FDFCFB",
         "bg-2": "#F7ECE1",
       },
+      spacing: {
+        192: "192px",
+      },
       fontSize: {
         h1: [
           "40px",
