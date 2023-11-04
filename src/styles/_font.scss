@@ -1,0 +1,107 @@
+@font-face {
+  font-family: MantouSans;
+  font-weight: 400;
+  src: url("../assets/fonts/MantouSans-Regular.ttf");
+}
+@layer base {
+  body {
+    @apply text-body-xs;
+  }
+  h1 {
+    @apply text-h1-xs;
+  }
+  h2 {
+    @apply text-h2-xs;
+  }
+  h3 {
+    @apply text-h3-xs;
+  }
+  h4 {
+    @apply text-h4-xs;
+  }
+  h5 {
+    @apply text-h5-xs;
+  }
+  h6 {
+    @apply text-h6-xs;
+  }
+  p {
+    @apply text-base-xs;
+  }
+  span {
+    @apply text-small-xs;
+  }
+  .primary-title {
+    @apply text-primary-title-xs;
+  }
+  .primary-title {
+    font-family: "MantouSans";
+    @apply text-primary-title-xs;
+  }
+  @screen md {
+    body {
+      @apply text-body-xs;
+    }
+    h1 {
+      @apply text-h1-xs;
+    }
+    h2 {
+      @apply text-h2-xs;
+    }
+    h3 {
+      @apply text-h3-xs;
+    }
+    h4 {
+      @apply text-h4-xs;
+    }
+    h5 {
+      @apply text-h5-xs;
+    }
+    h6 {
+      @apply text-h6-xs;
+    }
+    p {
+      @apply text-base-xs;
+    }
+    span {
+      @apply text-small-xs;
+    }
+    .primary-title {
+      font-family: "MantouSans";
+      @apply text-primary-title-xs;
+    }
+  }
+  @screen xl {
+    body {
+      @apply text-body;
+    }
+    h1 {
+      @apply text-h1;
+    }
+    h2 {
+      @apply text-h2;
+    }
+    h3 {
+      @apply text-h3;
+    }
+    h4 {
+      @apply text-h4;
+    }
+    h5 {
+      @apply text-h5;
+    }
+    h6 {
+      @apply text-h6;
+    }
+    p {
+      @apply text-base;
+    }
+    span {
+      @apply text-small;
+    }
+    .primary-title {
+      font-family: "MantouSans";
+      @apply text-primary-title;
+    }
+  }
+}
