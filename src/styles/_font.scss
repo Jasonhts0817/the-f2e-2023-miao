@@ -3,3 +3,9 @@
   font-weight: 400;
   src: url("../assets/fonts/MantouSans-Regular.ttf");
 }
+
+@layer base {
+  body {
+    @apply text-base;
+  }
+}

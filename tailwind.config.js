@@ -107,8 +107,8 @@ module.exports = {
           { lineHeight: "21px", letterSpacing: "normal", fontWeight: "400" },
         ],
         "2xl-xs": [
-          "40px",
-          { lineHeight: "42px", letterSpacing: "2px", fontWeight: "400" },
+          "52px",
+          { lineHeight: "55px", letterSpacing: "2px", fontWeight: "400" },
         ],
         "3xl-xs": [
           "96px",
