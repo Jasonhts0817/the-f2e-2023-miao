@@ -59,7 +59,11 @@ module.exports = {
         ],
         small: [
           "14px",
-          { lineHeight: "21px", letterSpacing: "normal", fontWeight: "400" },
+          { lineHeight: "normal", letterSpacing: "normal", fontWeight: "400" },
+        ],
+        xl: [
+          "52px",
+          { lineHeight: "68px", letterSpacing: "2px", fontWeight: "400" },
         ],
         "2xl": [
           "64px",

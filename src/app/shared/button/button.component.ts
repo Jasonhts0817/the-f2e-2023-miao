@@ -16,6 +16,8 @@ export class ButtonComponent {
         return { text: 'text-slate-700', bg: 'bg-gray-100', icon: Theme.Slate };
       case Theme.Primary:
         return { text: 'text-white', bg: 'bg-primary', icon: Theme.White };
+      case Theme.White:
+        return { text: 'text-slate-700', bg: 'bg-white', icon: Theme.Slate };
       default:
         return undefined;
     }
