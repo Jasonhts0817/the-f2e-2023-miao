@@ -1,0 +1,25 @@
+<a
+  class="inline-flex items-center gap-2 rounded-[500px] px-6 py-4"
+  [ngClass]="{
+    'bg-gray-100': theme === 'slate',
+    'bg-primary': theme === 'primary'
+  }"
+>
+  <span
+    class="text-h6"
+    [ngClass]="{
+      'text-slate-700': theme === 'slate',
+      'text-white': theme === 'primary'
+    }"
+  >
+    <ng-content></ng-content>
+  </span>
+  <span [ngSwitch]="icon">
+    <img
+      *ngSwitchCase="'arrow_forward'"
+      class="icon-primary h-4 w-4 text-slate-700"
+      [ngClass]="iconStyle"
+      src="assets/icons/arrow_forward.svg"
+    />
+  </span>
+</a>
