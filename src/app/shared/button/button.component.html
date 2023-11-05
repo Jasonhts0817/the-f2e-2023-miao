@@ -2,8 +2,8 @@
   class="inline-flex items-center gap-2 rounded-[500px] px-6 py-4"
   [ngClass]="buttonTheme?.bg"
 >
-  <span class="text-h6" [ngClass]="buttonTheme?.text">
+  <h6 class="text-h6" [ngClass]="buttonTheme?.text">
     <ng-content></ng-content>
-  </span>
+  </h6>
   <app-icon [theme]="buttonTheme?.icon" [icon]="icon"></app-icon>
 </a>

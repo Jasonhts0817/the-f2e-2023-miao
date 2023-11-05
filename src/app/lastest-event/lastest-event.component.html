@@ -3,14 +3,13 @@
     <app-title tag="LATEST EVENTS" title="最新活動"></app-title>
     <div class="flex flex-col gap-6 pt-10 xl:flex-row xl:pt-16">
       <div class="xl:w-1/2">
-        <picture
-          class="inline-flex h-[413px] w-full items-center overflow-hidden rounded-2xl"
-        >
+        <picture class="inline-flex items-center">
           <source
             [srcset]="lastestEventList[0].imgUrl.webp"
             type="image/webp"
           />
           <img
+            class="h-[241px] w-[992px] overflow-hidden rounded-2xl object-cover md:h-[443px] xl:h-[413px] xl:w-[688px]"
             [src]="lastestEventList[0].imgUrl.png"
             [alt]="lastestEventList[0].title"
           />
@@ -19,7 +18,7 @@
           <div class="text-small text-gray-500">
             {{ lastestEventList[0].date | date: "yyyy/MM/dd" }}
           </div>
-          <div class="text-h5">{{ lastestEventList[0].title }}</div>
+          <h5 class="text-h5">{{ lastestEventList[0].title }}</h5>
           <div class="text-small">{{ lastestEventList[0].desc }}</div>
         </div>
       </div>
@@ -29,17 +28,25 @@
         >
           <div *ngIf="i > 0" class="flex gap-4">
             <picture
-              class="inline-flex h-[134px] max-w-[201px] items-center overflow-hidden rounded-lg"
+              class="inline-flex h-[112px] w-[109px] items-center overflow-hidden rounded-lg md:h-[99px] xl:h-[134px] xl:w-[201px]"
             >
               <source [srcset]="lastestEvent.imgUrl.webp" type="image/webp" />
-              <img [src]="lastestEvent.imgUrl.png" [alt]="lastestEvent.title" />
+              <img
+                class="h-full w-full object-cover"
+                [src]="lastestEvent.imgUrl.png"
+                [alt]="lastestEvent.title"
+              />
             </picture>
-            <div class="flex flex-col gap-2">
+            <div
+              class="flex max-w-[calc(100%-125px)] flex-col gap-2 xl:max-w-[calc(100%-217px)]"
+            >
               <div class="text-small text-gray-500">
                 {{ lastestEvent.date | date: "yyyy/MM/dd" }}
               </div>
-              <div class="text-h5">{{ lastestEvent.title }}</div>
-              <div class="text-small">{{ lastestEvent.desc }}</div>
+              <h5 class="text-h6 xl:text-h5">{{ lastestEvent.title }}</h5>
+              <div class="ellipsis-text text-small/5 text-slate-700">
+                {{ lastestEvent.desc }}
+              </div>
             </div>
           </div>
         </ng-container>

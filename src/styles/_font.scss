@@ -8,4 +8,11 @@
   body {
     @apply text-base;
   }
+  .ellipsis-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 顯示的行數 */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
 }

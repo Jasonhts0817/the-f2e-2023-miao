@@ -7,12 +7,10 @@
         <div
           class="flex flex-col gap-6 rounded-[32px] bg-white/60 p-4 md:gap-8 md:p-8 lg:flex-row"
         >
-          <picture
-            class="flex items-center justify-center overflow-hidden rounded-3xl lg:w-[270px] xl:w-[428px]"
-          >
+          <picture class="flex items-center justify-center">
             <source [srcset]="policyIssue.imgUrl.webp" type="image/webp" />
             <img
-              class="w-full"
+              class="w-[768px] overflow-hidden rounded-3xl object-cover lg:w-[270px] xl:w-[428px]"
               [src]="policyIssue.imgUrl.png"
               [alt]="policyIssue.tag"
             />
@@ -21,10 +19,10 @@
             <app-chip [theme]="policyIssue.theme">{{
               policyIssue.tag
             }}</app-chip>
-            <div
+            <h4
               class="flex flex-col pb-10 pt-4 text-h4 text-slate-700 md:pb-6"
               [innerText]="policyIssue.desc"
-            ></div>
+            ></h4>
             <app-button [theme]="Theme.Primary" [icon]="Icon.ArrowForward"
               >查看</app-button
             >

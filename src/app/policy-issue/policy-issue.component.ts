@@ -27,6 +27,9 @@ export class PolicyIssueComponent implements AfterViewInit {
     slidesPerView: 1.2,
     initialSlide: 1,
     loop: true,
+    mousewheel: {
+      forceToAxis: true,
+    },
     keyboard: {
       onlyInViewport: true,
       enabled: true,
