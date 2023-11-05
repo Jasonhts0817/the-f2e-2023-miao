@@ -11,6 +11,7 @@ import { PolicyIssueComponent } from './policy-issue/policy-issue.component';
 import { TitleComponent } from './shared/title/title.component';
 import { ButtonComponent } from './shared/button/button.component';
 import { ChipComponent } from './shared/chip/chip.component';
+import { IconComponent } from './shared/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ChipComponent } from './shared/chip/chip.component';
     TitleComponent,
     ButtonComponent,
     ChipComponent,
+    IconComponent,
   ],
   imports: [BrowserModule],
   providers: [],

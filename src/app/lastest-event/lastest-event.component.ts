@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Theme } from '../core/enums/theme.enum';
+import { Icon } from '../core/enums/icon.enum';
 
 @Component({
   selector: 'app-lastest-event',
@@ -8,6 +9,7 @@ import { Theme } from '../core/enums/theme.enum';
 })
 export class LastestEventComponent {
   Theme = Theme;
+  Icon = Icon;
   lastestEventList = [
     {
       date: '2023/12/26',

@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Icon } from 'src/app/core/enums/icon.enum';
 import { Theme } from 'src/app/core/enums/theme.enum';
 
 @Component({
@@ -7,16 +8,16 @@ import { Theme } from 'src/app/core/enums/theme.enum';
 })
 export class ButtonComponent {
   @Input() theme!: Theme;
-  @Input() icon?: 'arrow_forward';
+  @Input() icon?: Icon;
 
-  public get iconStyle(): string {
+  get buttonTheme() {
     switch (this.theme) {
-      case 'primary':
-        return 'icon-white text-white';
-      case 'slate':
-        return 'icon-slate text-slate-700';
+      case Theme.Slate:
+        return { text: 'text-slate-700', bg: 'bg-gray-100', icon: Theme.Slate };
+      case Theme.Primary:
+        return { text: 'text-white', bg: 'bg-primary', icon: Theme.White };
       default:
-        return '';
+        return undefined;
     }
   }
 }

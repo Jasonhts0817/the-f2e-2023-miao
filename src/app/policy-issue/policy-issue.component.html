@@ -1,1 +1,46 @@
-<p>policy-issue works!</p>
+<div class="bg-bg-2 py-[104px] opacity-90">
+  <div class="relative">
+    <app-title tag="POLICY ISSUES" title="政策議題"></app-title>
+
+    <swiper-container #swiper init="false" class="pt-16">
+      <swiper-slide *ngFor="let policyIssue of policyIssueList">
+        <div
+          class="flex flex-col gap-6 rounded-[32px] bg-white/60 p-4 md:gap-8 md:p-8 lg:flex-row"
+        >
+          <picture
+            class="flex items-center justify-center overflow-hidden rounded-3xl lg:w-[270px] xl:w-[428px]"
+          >
+            <source [srcset]="policyIssue.imgUrl.webp" type="image/webp" />
+            <img
+              class="w-full"
+              [src]="policyIssue.imgUrl.png"
+              [alt]="policyIssue.tag"
+            />
+          </picture>
+          <div class="flex flex-col justify-center">
+            <app-chip [theme]="policyIssue.theme">{{
+              policyIssue.tag
+            }}</app-chip>
+            <div
+              class="flex flex-col pb-10 pt-4 text-h4 text-slate-700 md:pb-6"
+              [innerText]="policyIssue.desc"
+            ></div>
+            <app-button [theme]="Theme.Primary" [icon]="Icon.ArrowForward"
+              >查看</app-button
+            >
+          </div>
+        </div>
+        <span class="h-3 w-3 rounded-full bg-primary opacity-40"></span>
+      </swiper-slide>
+    </swiper-container>
+    <div class="flex w-full items-center justify-center gap-3 pt-6">
+      <div class="policy-issue-prev-button">
+        <app-icon [icon]="Icon.ArrowBack" [theme]="Theme.Primary"></app-icon>
+      </div>
+      <div class="policy-issue-pagination"></div>
+      <div class="policy-issue-next-button">
+        <app-icon [icon]="Icon.ArrowForward" [theme]="Theme.Primary"></app-icon>
+      </div>
+    </div>
+  </div>
+</div>
