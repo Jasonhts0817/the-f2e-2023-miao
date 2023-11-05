@@ -1,1 +1,41 @@
-<p>footer works!</p>
+<footer class="bg-bg-2 px-4 pb-32 pt-16 md:px-9 xl:px-0 xl:py-16">
+  <div class="container m-auto flex flex-col gap-6 xl:flex-row">
+    <div class="flex grow flex-col gap-4">
+      <div class="flex items-center gap-2">
+        <span
+          class="bg-gradient-primary inline-block h-[31px] w-[31px] rounded-full text-center align-middle text-h3 leading-[31px] text-white"
+          >3</span
+        >
+        <div class="text-h3 text-primary xl:text-h3">喵立翰 Miao Li-Han</div>
+      </div>
+      <div class="flex items-center gap-2">
+        <app-icon
+          class="rounded-full bg-white p-[10px]"
+          [icon]="Icon.Facebook"
+          [size]="Size.lg"
+        ></app-icon>
+        <app-icon
+          class="rounded-full bg-white p-[10px]"
+          [icon]="Icon.Instagram"
+          [size]="Size.lg"
+        ></app-icon>
+        <app-icon
+          class="rounded-full bg-white p-[10px]"
+          [icon]="Icon.Youtube"
+          [size]="Size.lg"
+        ></app-icon>
+      </div>
+      <div class="text-small text-slate-700">
+        © 2023 喵立翰 Miao Li-Han 版權所有
+      </div>
+    </div>
+    <div class="flex grow flex-col gap-4">
+      <div class="text-h4 text-slate-700">競選總部</div>
+      <div class="text-h6/6 font-normal">
+        <div>辦公室地址：喵星區，毛茸茸大道88號，喵喵大樓3樓</div>
+        <div>電話：(02) 888-5678</div>
+        <div>電子郵件地址：meowoffice@linmeow.tw</div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Icon } from 'src/app/core/enums/icon.enum';
+import { Size } from 'src/app/core/enums/size.enum';
 import { Theme } from 'src/app/core/enums/theme.enum';
 
 @Component({
@@ -9,17 +10,31 @@ import { Theme } from 'src/app/core/enums/theme.enum';
 export class IconComponent {
   @Input() theme?: Theme;
   @Input() icon?: Icon;
+  @Input() size: Size = Size.xs;
 
   private iconPath = 'assets/icons/';
 
   public get iconStyle(): string {
     switch (this.theme) {
-      case 'primary':
+      case Theme.Primary:
         return 'icon-primary';
-      case 'slate':
+      case Theme.Slate:
         return 'icon-slate';
-      case 'white':
+      case Theme.White:
         return 'icon-white';
+      default:
+        return '';
+    }
+  }
+
+  public get sizeStyle(): string {
+    switch (this.size) {
+      case Size.xs:
+        return 'h-4 w-4';
+      case Size.md:
+        return 'h-6 w-6';
+      case Size.lg:
+        return 'h-7 w-7';
       default:
         return '';
     }

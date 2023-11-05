@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 @import "swiper/css/bundle";
+
+@import "./styles/base";
 @import "./styles/font";
 @import "./styles/color";
 @import "./styles/swiper-custom";
