@@ -121,11 +121,21 @@ module.exports = {
       },
       animation: {
         marquee: "marquee 10s linear infinite",
+        fadeInUp: "fadeInUp 0.5s ease-out",
+        fadeOutDown: "fadeOutDown 0.5s ease-in",
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        fadeInUp: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0%)" },
+        },
+        fadeOutDown: {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(100%)" },
         },
       },
     },

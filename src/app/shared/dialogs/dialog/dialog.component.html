@@ -1,0 +1,18 @@
+<div
+  class="animate-fadeInUp fixed bottom-0 left-0 h-4/5 max-w-[1308px] rounded-t-3xl bg-white md:static md:my-6 md:h-[calc(100dvh-48px)] md:w-[calc(100vw-48px)] md:animate-none md:rounded-3xl"
+>
+  <div class="flex items-center justify-between p-4 pb-2 md:px-12 md:py-6">
+    <h2 class="text-h4 md:text-h2">{{ title }}</h2>
+    <app-icon
+      [icon]="Icon.Cancel"
+      class="cursor-pointer"
+      (click)="closeDialog()"
+      [size]="Size.xl"
+    ></app-icon>
+  </div>
+  <div
+    class="max-h-[calc(80dvh-60px)] overflow-y-auto p-4 pt-2 md:max-h-[calc(100dvh-180px)] md:p-12 md:pt-2"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>

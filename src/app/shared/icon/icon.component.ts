@@ -35,6 +35,8 @@ export class IconComponent {
         return 'h-6 w-6';
       case Size.lg:
         return 'h-7 w-7';
+      case Size.xl:
+        return 'h-8 w-8';
       default:
         return '';
     }
@@ -66,6 +68,8 @@ export class IconComponent {
         return `${this.iconPath}/user.svg`;
       case Icon.Youtube:
         return `${this.iconPath}/youtube.svg`;
+      case Icon.Cancel:
+        return `${this.iconPath}/cancel.svg`;
       default:
         return '';
     }

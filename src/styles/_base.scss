@@ -2,4 +2,7 @@
   html {
     @apply scroll-smooth;
   }
+  :focus-visible {
+    outline: unset;
+  }
 }

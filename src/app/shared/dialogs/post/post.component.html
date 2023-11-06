@@ -1,0 +1,66 @@
+<app-dialog [title]="title" [dialogRef]="dialogRef">
+  <div class="flex flex-col gap-8 xl:flex-row">
+    <div>
+      <picture class="inline-flex w-full items-center">
+        <source [srcset]="currentPost.imgUrl.webp" type="image/webp" />
+        <img
+          class="h-[251px] w-full overflow-hidden rounded-2xl object-cover md:h-[318px] xl:w-[507px]"
+          [src]="currentPost.imgUrl.png"
+          [alt]="currentPost.title"
+        />
+      </picture>
+      <div class="pt-4 text-h6/6 font-normal text-slate-700 md:text-small/5">
+        參與台北寵物論壇，爭取貓咪友善環境
+      </div>
+      <div class="flex gap-4 pt-2">
+        <span class="text-h6/6 font-normal text-slate-700">分享</span>
+        <a><app-icon [icon]="Icon.Facebook" [size]="Size.md"></app-icon></a>
+        <a><app-icon [icon]="Icon.Instagram" [size]="Size.md"></app-icon></a>
+        <a><app-icon [icon]="Icon.Line" [size]="Size.md"></app-icon></a>
+        <a><app-icon [icon]="Icon.Twitter" [size]="Size.md"></app-icon></a>
+      </div>
+    </div>
+    <div class="xl:max-w-[765px]">
+      <h3 class="text-h4 text-primary md:text-h2">
+        {{ currentPost.title }}
+      </h3>
+      <div class="pt-2 text-small/5 font-normal text-slate-700">
+        {{ currentPost.date | date: "yyyy/MM/dd" }}
+      </div>
+      <div class="flex flex-col gap-6 pb-24 pt-8">
+        <div class="flex flex-col" *ngFor="let article of currentPost.article">
+          <div *ngIf="article?.title" class="pb-2 text-h5">
+            {{ article.title }}
+          </div>
+          <div class="text-h6/6 font-normal text-slate-700">
+            {{ article.desc }}
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl bg-gray-50 p-4">
+        <div class="text-h6 font-semibold">{{ morePostTitle }}</div>
+        <div class="grid grid-cols-2 gap-4 pt-4 md:grid-cols-3">
+          <div
+            *ngFor="let post of otherPosts; let index = index"
+            class="xl:max-w-[233px]"
+            (click)="openPostDialog(post)"
+          >
+            <picture
+              class="inline-flex w-full overflow-hidden rounded-lg xl:h-[134px]"
+            >
+              <source [srcset]="post.imgUrl.webp" type="image/webp" />
+              <img
+                class="h-full w-full object-cover"
+                [src]="post.imgUrl.png"
+                [alt]="post.title"
+              />
+            </picture>
+            <div class="pt-4 text-body">
+              {{ post.title }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-dialog>

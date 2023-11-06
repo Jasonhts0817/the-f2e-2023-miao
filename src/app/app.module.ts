@@ -13,6 +13,10 @@ import { ButtonComponent } from './shared/button/button.component';
 import { ChipComponent } from './shared/chip/chip.component';
 import { IconComponent } from './shared/icon/icon.component';
 
+import { DialogModule } from '@angular/cdk/dialog';
+import { PostComponent } from './shared/dialogs/post/post.component';
+import { DialogComponent } from './shared/dialogs/dialog/dialog.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,8 +29,10 @@ import { IconComponent } from './shared/icon/icon.component';
     ButtonComponent,
     ChipComponent,
     IconComponent,
+    PostComponent,
+    DialogComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, DialogModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

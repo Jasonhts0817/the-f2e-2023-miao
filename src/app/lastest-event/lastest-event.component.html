@@ -19,7 +19,9 @@
             {{ lastestEventList[0].date | date: "yyyy/MM/dd" }}
           </div>
           <h5 class="text-h5">{{ lastestEventList[0].title }}</h5>
-          <div class="text-small">{{ lastestEventList[0].desc }}</div>
+          <div class="text-small">
+            {{ lastestEventList[0].article[0].desc }}
+          </div>
         </div>
       </div>
       <div class="flex flex-col gap-6 xl:w-1/2">
@@ -45,13 +47,16 @@
               </div>
               <h5 class="text-h6 xl:text-h5">{{ lastestEvent.title }}</h5>
               <div class="ellipsis-text text-small/5 text-slate-700">
-                {{ lastestEvent.desc }}
+                {{ lastestEvent.article[0].desc }}
               </div>
             </div>
           </div>
         </ng-container>
         <div>
-          <app-button [theme]="Theme.Slate" [icon]="Icon.ArrowForward"
+          <app-button
+            [theme]="Theme.Slate"
+            [icon]="Icon.ArrowForward"
+            (click)="openPostDialog()"
             >查看更多</app-button
           >
         </div>

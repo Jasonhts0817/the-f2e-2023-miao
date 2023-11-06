@@ -11,4 +11,5 @@ export enum Icon {
   Twitter = 'twitter',
   User = 'user',
   Youtube = 'youtube',
+  Cancel = 'cancel',
 }
