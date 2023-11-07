@@ -9,11 +9,11 @@
           [alt]="currentPost.title"
         />
       </picture>
-      <div class="pt-4 text-h6/6 font-normal text-slate-700 md:text-small/5">
+      <div class="pt-4 text-h6/6 font-normal md:text-small/5">
         參與台北寵物論壇，爭取貓咪友善環境
       </div>
       <div class="flex gap-4 pt-2">
-        <span class="text-h6/6 font-normal text-slate-700">分享</span>
+        <span class="text-h6/6 font-normal">分享</span>
         <a><app-icon [icon]="Icon.Facebook" [size]="Size.md"></app-icon></a>
         <a><app-icon [icon]="Icon.Instagram" [size]="Size.md"></app-icon></a>
         <a><app-icon [icon]="Icon.Line" [size]="Size.md"></app-icon></a>
@@ -24,7 +24,7 @@
       <h3 class="text-h4 text-primary md:text-h2">
         {{ currentPost.title }}
       </h3>
-      <div class="pt-2 text-small/5 font-normal text-slate-700">
+      <div class="pt-2 text-small/5 font-normal">
         {{ currentPost.date | date: "yyyy/MM/dd" }}
       </div>
       <div class="flex flex-col gap-6 pb-24 pt-8">
@@ -32,7 +32,7 @@
           <div *ngIf="article?.title" class="pb-2 text-h5">
             {{ article.title }}
           </div>
-          <div class="text-h6/6 font-normal text-slate-700">
+          <div class="text-h6/6 font-normal">
             {{ article.desc }}
           </div>
         </div>

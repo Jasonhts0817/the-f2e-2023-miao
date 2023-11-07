@@ -25,6 +25,7 @@ import { IconComponent } from 'src/app/shared/icon.component';
 import { ButtonComponent } from 'src/app/shared/button.component';
 import { ChipComponent } from 'src/app/shared/chip.component';
 import { TitleComponent } from 'src/app/shared/title.component';
+import { Size } from 'src/app/core/enums/size.enum';
 
 @Component({
   selector: 'app-policy-issue',
@@ -43,6 +44,7 @@ export class PolicyIssueComponent implements AfterViewInit {
   @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;
   Theme = Theme;
   Icon = Icon;
+  Size = Size;
   swiperConfig: SwiperOptions = {
     modules: [EffectCoverflow, Pagination, Navigation, Keyboard],
     effect: 'coverflow',

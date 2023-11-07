@@ -1,0 +1,107 @@
+<app-dialog title="小額捐款" [dialogRef]="dialogRef">
+  <div class="flex h-full w-full flex-col gap-8 md:flex-row">
+    <div
+      class="flex w-full justify-between rounded-3xl bg-bg-2 p-6 md:max-w-[731px] md:grow md:flex-col md:p-[60px]"
+    >
+      <div>
+        <div class="text-h6 text-primary md:text-h1">
+          <div>您的小筆捐款</div>
+          <div>是每隻毛孩未來的大大動力！</div>
+        </div>
+        <div class="pt-4">
+          <div class="text-small/5 font-normal md:text-h6/6">
+            目前小額贊助總金額
+          </div>
+          <div class="text-h5 md:text-h2">987,655,873</div>
+        </div>
+      </div>
+      <picture class="flex items-center justify-center md:grow">
+        <source srcset="assets/images/webp/image-11.webp" type="image/webp" />
+        <img
+          class="max-h-[95px] md:max-h-[348px]"
+          src="assets/images/png/image-11.png"
+          alt="小額捐款"
+        />
+      </picture>
+    </div>
+    <div
+      class="flex w-full grow items-center justify-center md:max-w-[541px] md:items-start"
+    >
+      <div class="flex w-full flex-col gap-4" *ngIf="!isSuccess; else success">
+        <div class="text-h5">捐款方案</div>
+        <label class="cursor-pointer" *ngFor="let plan of donatePlans">
+          <input name="donate" type="radio" class="peer hidden" />
+          <div
+            class="flex flex-col items-start rounded-2xl border border-solid border-gray-200 px-4 py-6 peer-checked:border-2 peer-checked:border-primary lg:flex-row lg:items-center"
+          >
+            <div class="grow text-h5 text-primary">{{ plan.title }}</div>
+            <div
+              class="flex w-full items-center justify-between lg:w-fit lg:justify-end"
+            >
+              <div
+                class="flex items-center align-middle text-h4 before:pr-2 before:text-h6/6 before:font-normal before:content-['NT$']"
+              >
+                {{ plan.price | currency: "" : "" : "0.0" }}
+              </div>
+              <div class="w-[140px] text-end text-small/5 text-gray-400">
+                已有 {{ plan.times | currency: "" : "" : "0.0" }} 人贊助
+              </div>
+            </div>
+          </div>
+        </label>
+        <label for="custom-price" class="cursor-pointer">
+          <input
+            #customPrice
+            id="custom-price"
+            name="donate"
+            type="radio"
+            class="peer hidden"
+          />
+          <div
+            class="rounded-2xl border border-solid border-gray-200 p-4 peer-checked:border-2 peer-checked:border-primary"
+          >
+            <div class="grow pb-2 text-h5 text-primary">自訂贊助金額</div>
+            <div
+              class="flex items-center gap-[10px] rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500 before:text-h6/6 before:font-normal before:content-['NT$']"
+            >
+              <input
+                type="text"
+                placeholder="輸入金額"
+                class="bg-gray-100"
+                (click)="customPrice.click()"
+              />
+            </div>
+          </div>
+        </label>
+        <app-button
+          class="pb-4"
+          [theme]="Theme.Primary"
+          [size]="Size.lg"
+          (click)="submit()"
+          >前往捐款</app-button
+        >
+      </div>
+
+      <ng-template #success>
+        <div class="flex flex-col items-center gap-8">
+          <div class="text-h3/10">感謝您的捐款</div>
+          <picture class="flex h-full w-full grow items-center justify-center">
+            <source srcset="assets/images/webp/vector.webp" type="image/webp" />
+            <img
+              class="w-full max-w-[187px]"
+              src="assets/images/png/vector.png"
+              alt="小額捐款"
+            />
+          </picture>
+          <app-button
+            class="w-[224px] pb-4"
+            [theme]="Theme.Slate"
+            [size]="Size.md"
+            (click)="dialogRef.close()"
+            >關閉</app-button
+          >
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</app-dialog>

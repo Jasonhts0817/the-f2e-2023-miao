@@ -6,7 +6,7 @@ import { Theme } from 'src/app/core/enums/theme.enum';
   selector: 'app-chip',
   template: `
     <span
-      class="rounded-full px-3 py-1 text-small text-slate-700 opacity-80"
+      class="rounded-full px-3 py-1 text-small opacity-80"
       [ngClass]="{
         'bg-bg-2': theme === Theme.Primary,
         'bg-[#BEEADB]': theme === Theme.Green,

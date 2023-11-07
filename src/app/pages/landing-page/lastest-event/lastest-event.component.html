@@ -46,7 +46,7 @@
                 {{ lastestEvent.date | date: "yyyy/MM/dd" }}
               </div>
               <h5 class="text-h6 xl:text-h5">{{ lastestEvent.title }}</h5>
-              <div class="ellipsis-text text-small/5 text-slate-700">
+              <div class="ellipsis-text text-small/5">
                 {{ lastestEvent.article[0].desc }}
               </div>
             </div>
@@ -54,8 +54,10 @@
         </ng-container>
         <div>
           <app-button
+            class="inline-block w-[152px]"
             [theme]="Theme.Slate"
             [icon]="Icon.ArrowForward"
+            [size]="Size.md"
             (click)="openPostDialog()"
             >查看更多</app-button
           >

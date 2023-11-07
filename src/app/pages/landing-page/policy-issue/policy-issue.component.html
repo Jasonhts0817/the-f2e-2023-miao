@@ -20,12 +20,14 @@
               policyIssue.tag
             }}</app-chip>
             <h4
-              class="flex flex-col pb-10 pt-4 text-h4 text-slate-700 md:pb-6"
+              class="flex flex-col pb-10 pt-4 text-h4 md:pb-6"
               [innerText]="policyIssue.title"
             ></h4>
             <app-button
+              class="w-[120px]"
               [theme]="Theme.Primary"
               [icon]="Icon.ArrowForward"
+              [size]="Size.md"
               (click)="openPostDialog(policyIssue)"
               >查看</app-button
             >

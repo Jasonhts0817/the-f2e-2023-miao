@@ -12,7 +12,12 @@
         </h5>
       </div>
       <div class="flex items-end justify-between">
-        <app-button [icon]="Icon.ArrowForward" [theme]="Theme.White"
+        <app-button
+          class="inline-block w-[152px]"
+          [icon]="Icon.ArrowForward"
+          [theme]="Theme.White"
+          [size]="Size.md"
+          (click)="openDonateDialog()"
           >小額捐款</app-button
         >
         <picture>
@@ -35,7 +40,12 @@
         </h5>
       </div>
       <div>
-        <app-button [icon]="Icon.ArrowForward" [theme]="Theme.White"
+        <app-button
+          class="inline-block w-[152px]"
+          [icon]="Icon.ArrowForward"
+          [theme]="Theme.White"
+          [size]="Size.md"
+          (click)="openContactUsialog()"
           >填寫表單</app-button
         >
       </div>

@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:prod": "ng build --configuration=production --base-href /the-f2e-2023-miao/"
+    "build:prod": "ng build --configuration=production --base-href /the-f2e-2023-miao/",
+    "image:webp": "mogrify -path ./src/assets/images/webp -format webp ./src/assets/images/png/*.png"
   },
   "private": true,
   "dependencies": {

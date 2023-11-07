@@ -9,6 +9,7 @@ import {
 import { ButtonComponent } from 'src/app/shared/button.component';
 import { TitleComponent } from 'src/app/shared/title.component';
 import { CommonModule, DatePipe } from '@angular/common';
+import { Size } from 'src/app/core/enums/size.enum';
 
 @Component({
   selector: 'app-lastest-event',
@@ -19,6 +20,7 @@ import { CommonModule, DatePipe } from '@angular/common';
 export class LastestEventComponent {
   Theme = Theme;
   Icon = Icon;
+  Size = Size;
   lastestEventList: Post[] = [
     {
       id: 1,
