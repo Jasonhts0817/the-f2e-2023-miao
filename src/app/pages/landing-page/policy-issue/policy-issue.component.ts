@@ -1,4 +1,10 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Component,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { SwiperContainer } from 'swiper/element';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import {
@@ -7,15 +13,31 @@ import {
   Navigation,
   Keyboard,
 } from 'swiper/modules';
-import { Theme } from '../core/enums/theme.enum';
-import { Icon } from '../core/enums/icon.enum';
-import { Post, PostComponent } from '../shared/dialogs/post/post.component';
+import { Theme } from '../../../core/enums/theme.enum';
+import { Icon } from '../../../core/enums/icon.enum';
+import {
+  Post,
+  PostComponent,
+} from '../../../shared/dialogs/post/post.component';
 import { Dialog } from '@angular/cdk/dialog';
+import { CommonModule } from '@angular/common';
+import { IconComponent } from 'src/app/shared/icon.component';
+import { ButtonComponent } from 'src/app/shared/button.component';
+import { ChipComponent } from 'src/app/shared/chip.component';
+import { TitleComponent } from 'src/app/shared/title.component';
 
 @Component({
   selector: 'app-policy-issue',
+  standalone: true,
+  imports: [
+    CommonModule,
+    IconComponent,
+    ButtonComponent,
+    ChipComponent,
+    TitleComponent,
+  ],
   templateUrl: './policy-issue.component.html',
-  styleUrls: ['./policy-issue.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PolicyIssueComponent implements AfterViewInit {
   @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;

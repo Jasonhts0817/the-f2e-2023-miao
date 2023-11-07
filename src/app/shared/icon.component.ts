@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Icon } from 'src/app/core/enums/icon.enum';
 import { Size } from 'src/app/core/enums/size.enum';
@@ -5,7 +6,11 @@ import { Theme } from 'src/app/core/enums/theme.enum';
 
 @Component({
   selector: 'app-icon',
-  templateUrl: './icon.component.html',
+  template: `
+    <img [ngClass]="iconStyle + ' ' + sizeStyle" [src]="iconUrl" [alt]="icon" />
+  `,
+  standalone: true,
+  imports: [CommonModule],
 })
 export class IconComponent {
   @Input() theme?: Theme;

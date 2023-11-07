@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { Theme } from '../core/enums/theme.enum';
-import { Icon } from '../core/enums/icon.enum';
+import { Theme } from '../../../core/enums/theme.enum';
+import { Icon } from '../../../core/enums/icon.enum';
 import { Dialog } from '@angular/cdk/dialog';
-import { Post, PostComponent } from '../shared/dialogs/post/post.component';
+import {
+  Post,
+  PostComponent,
+} from '../../../shared/dialogs/post/post.component';
+import { ButtonComponent } from 'src/app/shared/button.component';
+import { TitleComponent } from 'src/app/shared/title.component';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-lastest-event',
+  standalone: true,
+  imports: [CommonModule, ButtonComponent, TitleComponent, DatePipe],
   templateUrl: './lastest-event.component.html',
-  styleUrls: ['./lastest-event.component.scss'],
 })
 export class LastestEventComponent {
   Theme = Theme;

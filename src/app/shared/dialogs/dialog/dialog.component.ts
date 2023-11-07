@@ -8,11 +8,13 @@ import {
 } from '@angular/core';
 import { Icon } from 'src/app/core/enums/icon.enum';
 import { Size } from 'src/app/core/enums/size.enum';
+import { IconComponent } from '../../icon.component';
 
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss'],
+  standalone: true,
+  imports: [IconComponent],
 })
 export class DialogComponent implements OnChanges {
   @Input() dialogRef!: DialogRef;
