@@ -18,16 +18,17 @@
       <picture class="flex items-center justify-center md:grow">
         <source srcset="assets/images/webp/image-11.webp" type="image/webp" />
         <img
-          class="max-h-[95px] md:max-h-[348px]"
+          class="w-full max-w-[91px] md:max-w-[336px]"
           src="assets/images/png/image-11.png"
           alt="小額捐款"
         />
       </picture>
     </div>
     <div
+      *ngIf="!isSuccess; else success"
       class="flex w-full grow items-center justify-center md:max-w-[541px] md:items-start"
     >
-      <div class="flex w-full flex-col gap-4" *ngIf="!isSuccess; else success">
+      <div class="flex w-full flex-col gap-4">
         <div class="text-h5">捐款方案</div>
         <label class="cursor-pointer" *ngFor="let plan of donatePlans">
           <input name="donate" type="radio" class="peer hidden" />
@@ -81,9 +82,12 @@
           >前往捐款</app-button
         >
       </div>
-
-      <ng-template #success>
-        <div class="flex flex-col items-center gap-8">
+    </div>
+    <ng-template #success>
+      <div
+        class="flex w-full grow items-center justify-center md:max-w-[541px]"
+      >
+        <div class="flex flex-col items-center justify-center gap-8">
           <div class="text-h3/10">感謝您的捐款</div>
           <picture class="flex h-full w-full grow items-center justify-center">
             <source srcset="assets/images/webp/vector.webp" type="image/webp" />
@@ -101,7 +105,7 @@
             >關閉</app-button
           >
         </div>
-      </ng-template>
-    </div>
+      </div>
+    </ng-template>
   </div>
 </app-dialog>

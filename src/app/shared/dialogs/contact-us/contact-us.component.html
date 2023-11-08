@@ -1,1 +1,95 @@
-<app-dialog title="民眾服務信箱" [dialogRef]="dialogRef"> </app-dialog>
+<app-dialog title="民眾服務信箱" [dialogRef]="dialogRef">
+  <div class="flex h-full w-full flex-col gap-8 md:flex-row">
+    <div
+      class="relative min-h-[147px] w-full overflow-hidden rounded-3xl bg-[#E3F8FF] p-6 md:max-w-[731px] md:grow md:px-[60px] md:py-16"
+    >
+      <div class="w-[139px] text-h6 md:w-full md:text-h1">
+        <div>分享您的想法</div>
+        <div>一同為我們的未來打造更美好！</div>
+      </div>
+      <picture class="absolute bottom-0 right-0 md:w-full">
+        <source srcset="assets/images/webp/image-10.webp" type="image/webp" />
+        <img
+          class="w-[207px] md:w-full"
+          src="assets/images/png/image-10.png"
+          alt="小額捐款"
+        />
+      </picture>
+    </div>
+
+    <div
+      *ngIf="!isSuccess; else success"
+      class="flex w-full grow items-center justify-center md:max-w-[541px] md:items-start"
+    >
+      <div class="flex w-full flex-col gap-6">
+        <label>
+          <div class="grow pb-2 text-h5">您的姓名</div>
+          <input
+            type="text"
+            placeholder="姓名"
+            class="rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+          />
+        </label>
+
+        <label>
+          <div class="grow pb-2 text-h5">Email</div>
+          <input
+            type="text"
+            placeholder="email"
+            class="rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+          />
+        </label>
+
+        <label>
+          <div class="grow pb-2 text-h5">手機</div>
+          <input
+            type="text"
+            placeholder="手機號碼"
+            class="rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+          />
+        </label>
+
+        <label>
+          <div class="grow pb-2 text-h5">您的建言</div>
+          <textarea
+            type="text"
+            placeholder="輸入內容"
+            class="h-[176px] w-full rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+          ></textarea>
+        </label>
+
+        <app-button
+          class="pb-4"
+          [theme]="Theme.Primary"
+          [size]="Size.lg"
+          (click)="submit()"
+          >送出意見</app-button
+        >
+      </div>
+    </div>
+    <ng-template #success>
+      <div
+        class="flex w-full grow items-center justify-center md:max-w-[541px]"
+      >
+        <div class="flex flex-col items-center justify-center gap-8">
+          <div class="text-h3/10">感謝您的意見</div>
+          <picture class="flex h-full w-full grow items-center justify-center">
+            <source srcset="assets/images/webp/vector.webp" type="image/webp" />
+            <img
+              class="w-full max-w-[187px]"
+              src="assets/images/png/vector.png"
+              alt="民眾意見"
+            />
+          </picture>
+          <app-button
+            class="w-[224px] pb-4"
+            [theme]="Theme.Slate"
+            [size]="Size.md"
+            (click)="dialogRef.close()"
+            >關閉</app-button
+          >
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</app-dialog>
