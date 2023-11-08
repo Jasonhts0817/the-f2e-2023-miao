@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { DialogModule } from '@angular/cdk/dialog';
 import { RouterModule, Routes } from '@angular/router';
+import { LoadingComponent } from './shared/loading.component';
 const routes: Routes = [
   {
     path: '',
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoadingComponent],
   imports: [BrowserModule, DialogModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
