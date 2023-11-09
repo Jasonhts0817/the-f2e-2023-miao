@@ -1,8 +1,20 @@
 <section class="bg-bg-2/90 py-[104px]">
   <div class="relative">
-    <app-title tag="POLICY ISSUES" title="政策議題"></app-title>
+    <app-title
+      tag="POLICY ISSUES"
+      title="政策議題"
+      data-aos="fade-zoom-in"
+      data-aos-duration="1000"
+    ></app-title>
 
-    <swiper-container #swiper init="false" class="pt-16">
+    <swiper-container
+      #swiper
+      init="false"
+      class="pt-16"
+      data-aos="fade-zoom-in"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+    >
       <swiper-slide *ngFor="let policyIssue of displayPolicyIssues">
         <div
           class="flex flex-col gap-6 rounded-[32px] bg-white/60 p-4 md:gap-8 md:p-8 lg:flex-row"
@@ -36,7 +48,12 @@
         <span class="h-3 w-3 rounded-full bg-primary opacity-40"></span>
       </swiper-slide>
     </swiper-container>
-    <div class="flex w-full items-center justify-center gap-3 pt-6">
+    <div
+      class="flex w-full items-center justify-center gap-3 pt-6"
+      data-aos="fade-zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1000"
+    >
       <div class="policy-issue-prev-button">
         <app-icon [icon]="Icon.ArrowBack" [theme]="Theme.Primary"></app-icon>
       </div>

@@ -123,6 +123,7 @@ module.exports = {
         marquee: "marquee 10s linear infinite",
         fadeInUp: "fadeInUp 0.5s ease-out",
         fadeOutDown: "fadeOutDown 0.5s ease-in",
+        fadeOut: "fadeOut 0.5s ease-out",
       },
       keyframes: {
         marquee: {
@@ -136,6 +137,10 @@ module.exports = {
         fadeOutDown: {
           "0%": { transform: "translateY(0%)" },
           "100%": { transform: "translateY(100%)" },
+        },
+        fadeOut: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
         },
       },
     },
