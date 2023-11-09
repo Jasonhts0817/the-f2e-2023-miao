@@ -1,4 +1,4 @@
-<main class="flex flex-col items-center justify-end bg-white/90">
+<main class="relative flex flex-col items-center justify-end bg-white/90">
   <div
     data-aos="fade-zoom-in"
     data-aos-duration="1000"
@@ -48,6 +48,19 @@
       <span>為喵星人，護台灣！</span>
       <span>從喵的眼中，看見台灣</span>
       <span>喵的未來，人的希望</span>
+    </div>
+  </div>
+
+  <div class="absolute bottom-24 flex justify-center">
+    <div
+      class="z-10 flex gap-4 rounded-xl bg-white px-10 py-2 xl:hidden"
+      data-aos="fade-zoom-in"
+      data-aos-duration="1000"
+      data-aos-delay="2000"
+    >
+      <a><app-icon [icon]="Icon.Facebook" [size]="Size.md"></app-icon></a>
+      <a><app-icon [icon]="Icon.Instagram" [size]="Size.md"></app-icon></a>
+      <a><app-icon [icon]="Icon.Youtube" [size]="Size.md"></app-icon></a>
     </div>
   </div>
 </main>
