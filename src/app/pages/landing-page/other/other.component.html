@@ -15,7 +15,7 @@
           您的小筆捐款，是每隻毛孩未來的大大動力！
         </h5>
       </div>
-      <div class="flex items-end justify-between">
+      <div class="flex items-center justify-between">
         <app-button
           class="inline-block w-[152px]"
           [icon]="Icon.ArrowForward"
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div
-      class="flex min-h-[307px] grow flex-col justify-between rounded-[32px] bg-slate-700 p-10 text-white xl:p-24"
+      class="flex min-h-[307px] grow flex-col rounded-[32px] bg-slate-700 p-10 text-white xl:gap-5 xl:p-24"
     >
       <div class="flex flex-col gap-4">
         <h1 class="font-['MantouSans'] text-h1 xl:text-xl">民眾服務信箱</h1>
@@ -43,7 +43,7 @@
           每一位市民的意見都是我們社區前進的原動力
         </h5>
       </div>
-      <div>
+      <div class="flex items-center justify-between">
         <app-button
           class="inline-block w-[152px]"
           [icon]="Icon.ArrowForward"
@@ -52,6 +52,14 @@
           (click)="openContactUsialog()"
           >填寫表單</app-button
         >
+        <picture>
+          <source srcset="assets/images/webp/image-15.webp" type="image/webp" />
+          <img
+            class="h-[105px] w-[102px] object-cover xl:h-[263px] xl:w-[254px]"
+            src="assets/images/png/image-15.png"
+            alt="小額捐款"
+          />
+        </picture>
       </div>
     </div>
   </div>
