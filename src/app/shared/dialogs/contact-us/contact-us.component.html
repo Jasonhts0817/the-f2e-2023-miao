@@ -20,42 +20,90 @@
     <div
       *ngIf="!isSuccess; else success"
       class="flex w-full grow items-center justify-center md:max-w-[541px] md:items-start"
+      [formGroup]="contactUsForm"
     >
       <div class="flex w-full flex-col gap-6">
-        <label>
+        <label class="relative">
           <div class="grow pb-2 text-h5">您的姓名</div>
           <input
             type="text"
             placeholder="姓名"
+            name="name"
+            formControlName="name"
             class="rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+            [ngClass]="{
+              'border-2 border-solid border-red-500':
+                isSubmit && contactUsForm.controls.name.errors
+            }"
           />
+          <app-form-error
+            class="absolute bottom-[-25px] left-0"
+            [visible]="isSubmit"
+            [control]="contactUsForm.controls.name"
+            fieldName="姓名"
+          ></app-form-error>
         </label>
 
-        <label>
+        <label class="relative">
           <div class="grow pb-2 text-h5">Email</div>
           <input
             type="text"
+            name="email"
             placeholder="email"
+            formControlName="email"
             class="rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+            [ngClass]="{
+              'border-2 border-solid border-red-500':
+                isSubmit && contactUsForm.controls.email.errors
+            }"
           />
+          <app-form-error
+            class="absolute bottom-[-25px] left-0"
+            [visible]="isSubmit"
+            [control]="contactUsForm.controls.email"
+            fieldName="Email"
+          ></app-form-error>
         </label>
 
-        <label>
+        <label class="relative">
           <div class="grow pb-2 text-h5">手機</div>
           <input
             type="text"
+            name="phone"
             placeholder="手機號碼"
+            formControlName="phone"
             class="rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+            [ngClass]="{
+              'border-2 border-solid border-red-500':
+                isSubmit && contactUsForm.controls.phone.errors
+            }"
           />
+          <app-form-error
+            class="absolute bottom-[-25px] left-0"
+            [visible]="isSubmit"
+            [control]="contactUsForm.controls.phone"
+            fieldName="手機號碼"
+          ></app-form-error>
         </label>
 
-        <label>
+        <label class="relative">
           <div class="grow pb-2 text-h5">您的建言</div>
           <textarea
             type="text"
             placeholder="輸入內容"
+            formControlName="message"
             class="h-[176px] w-full rounded-lg bg-gray-100 px-[15px] py-4 text-base text-gray-500"
+            [ngClass]="{
+              'border-2 border-solid border-red-500':
+                isSubmit && contactUsForm.controls.message.errors
+            }"
           ></textarea>
+          <app-form-error
+            class="absolute bottom-[-17px] left-0"
+            [visible]="isSubmit"
+            [control]="contactUsForm.controls.message"
+            fieldName="您的建言"
+          ></app-form-error>
         </label>
 
         <app-button
