@@ -1,5 +1,7 @@
 # The F2E 2023 - Mission 1 立委競選官網 [連結](https://2023.thef2e.com/news)
 
+![](readme-imgs/README_2023-11-11-19-48-54.png)
+
 # 作品說明
 
 ## UI 設計作品
@@ -116,9 +118,10 @@ v 16.16.0
 # 使用技術
 
 - Angular
-  - stanealone
-  - material cdk
+  - Stanealone
+  - Material cdk
   - Reactive Form
+  - Angular Universal(SSG)
 - CSS
   - TailwindCSS
   - RWD
@@ -126,5 +129,5 @@ v 16.16.0
   - Lottie
   - AOS.js
   - Swiper
-  - imagemagick
+  - Imagemagick
   - Service Worker
