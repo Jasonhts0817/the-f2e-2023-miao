@@ -121,9 +121,11 @@ module.exports = {
       },
       animation: {
         marquee: "marquee 10s linear infinite",
-        fadeInUp: "fadeInUp 0.5s ease-out",
-        fadeOutDown: "fadeOutDown 0.5s ease-in",
+        fadeInUp: "fadeInUp 0.2s ease-out",
+        fadeOutDown: "fadeOutDown 0.2s ease-in",
         fadeOut: "fadeOut 0.5s ease-out",
+        float2: `float 2s ease-in-out infinite`,
+        float3: `float 3s ease-in-out infinite`,
       },
       keyframes: {
         marquee: {
@@ -141,6 +143,11 @@ module.exports = {
         fadeOut: {
           "0%": { opacity: 1 },
           "100%": { opacity: 0 },
+        },
+        float: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+          "100%": { transform: "translateY(0)" },
         },
       },
     },

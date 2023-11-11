@@ -37,6 +37,6 @@ export class DialogComponent implements OnChanges {
     this.ref.nativeElement.firstElementChild?.classList.add(
       'animate-fadeOutDown',
     );
-    setTimeout(() => this.dialogRef.close(), 500);
+    setTimeout(() => this.dialogRef.close(), 200);
   }
 }

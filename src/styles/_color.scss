@@ -2,6 +2,11 @@
   .bg-gradient-primary {
     @apply bg-gradient-to-r from-[#E5793B] from-[1.54%] to-[#FF4185] to-[97.86%];
   }
+
+  .bg-gradient-main {
+    @apply bg-gradient-to-br from-[#FFD4E3] from-[7.72%] via-[#E8E3FE] via-[19.24%] to-[#A0D2FF] to-[66.04%];
+  }
+
   .text-gradient-primary {
     @apply bg-gradient-to-r from-[#E5793B] from-[1.54%] to-[#FF4185] to-[97.86%] bg-clip-text text-transparent;
   }

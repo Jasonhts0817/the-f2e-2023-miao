@@ -8,10 +8,14 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       AOS.init({
-        easing: 'ease-in-back',
-        offset: 200,
         once: true,
-        throttleDelay: 1,
+        offset: 100,
+      });
+      document.addEventListener('aos:in', ({ detail }) => {
+        console.log('animated in', detail);
+      });
+      document.addEventListener('aos:out', ({ detail }) => {
+        console.log('animated out', detail);
       });
     }, 1500);
   }

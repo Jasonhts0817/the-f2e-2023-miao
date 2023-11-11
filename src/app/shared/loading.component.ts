@@ -6,7 +6,7 @@ import * as lottie from 'lottie-web';
     <div
       *ngIf="showOverlay"
       #loadingContainer
-      class="fixed left-0 top-0 z-20 flex h-screen w-screen items-center justify-center bg-white"
+      class="fixed left-0 top-0 z-30 flex h-screen w-screen items-center justify-center bg-white"
     >
       <div #loading class="h-246px w-[220px]"></div>
     </div>

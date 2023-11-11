@@ -22,7 +22,7 @@ export class OtherComponent {
   constructor(private dialog: Dialog) {}
 
   openDonateDialog() {
-    this.dialog.open(DonateComponent, { autoFocus: false });
+    this.dialog.open(DonateComponent);
   }
 
   openContactUsialog() {

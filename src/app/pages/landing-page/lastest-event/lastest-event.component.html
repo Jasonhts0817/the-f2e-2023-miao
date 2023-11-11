@@ -1,18 +1,15 @@
 <section class="bg-white/90 px-4 py-16 md:px-9 xl:px-0 xl:py-[104px]">
   <div class="container m-auto">
-    <app-title
-      tag="LATEST EVENTS"
-      title="最新活動"
-      data-aos="fade-zoom-in"
-      data-aos-duration="1000"
-    ></app-title>
+    <div data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="1000">
+      <app-title tag="LATEST EVENTS" title="最新活動"></app-title>
+    </div>
     <div
       class="flex flex-col gap-6 pt-10 xl:flex-row xl:pt-16"
       data-aos="fade-zoom-in"
       data-aos-delay="200"
       data-aos-duration="1000"
     >
-      <div class="xl:w-1/2">
+      <div class="xl:w-1/2" (click)="openPostDialog(lastestEventList[0])">
         <picture class="inline-flex items-center">
           <source
             [srcset]="lastestEventList[0].imgUrl.webp"
@@ -38,7 +35,11 @@
         <ng-container
           *ngFor="let lastestEvent of lastestEventList; let i = index"
         >
-          <div *ngIf="i > 0" class="flex gap-4">
+          <div
+            *ngIf="i > 0"
+            class="flex gap-4"
+            (click)="openPostDialog(lastestEvent)"
+          >
             <picture
               class="inline-flex h-[112px] w-[109px] items-center overflow-hidden rounded-lg md:h-[99px] xl:h-[134px] xl:w-[201px]"
             >

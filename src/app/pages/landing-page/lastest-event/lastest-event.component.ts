@@ -81,12 +81,12 @@ export class LastestEventComponent {
   ];
   constructor(private dialog: Dialog) {}
 
-  openPostDialog() {
+  openPostDialog(currentPost?: Post) {
     this.dialog.open(PostComponent, {
       data: {
         title: '最新活動',
         morePostTitle: '更多活動',
-        currentPost: this.lastestEventList[0],
+        currentPost: currentPost ?? this.lastestEventList[0],
         posts: this.lastestEventList,
       },
     });
