@@ -1,6 +1,9 @@
-# The F2E 2023 - Mission 1 立委競選官網 [連結](https://2023.thef2e.com/news)
-
+# The F2E 2023 - Mission 1 立委競選官網 
 ![](readme-imgs/README_2023-11-11-19-48-54.png)
+
+網站連結 [連結](https://jasonhts0817.github.io/the-f2e-2023-miao/)
+
+F2E 2023 官網 [連結](https://2023.thef2e.com/news)
 
 # 作品說明
 
